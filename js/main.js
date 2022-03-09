@@ -19,10 +19,6 @@ function init() {
 
 function firstQuestion() {
     $('.content').hide();
-    var music = document.getElementById('music');
-    music.src = './sound/PhaiChangEmDaYeu_Cutted.mp3';
-    music.load();
-    music.play();
     Swal.fire({
         title: CONFIG.introTitle,
         text: CONFIG.introDesc,
@@ -34,6 +30,10 @@ function firstQuestion() {
         confirmButtonText: CONFIG.btnIntro
     }).then(function() {
         $('.content').show(200);
+        var music = document.getElementById('music');
+        music.src = './sound/PhaiChangEmDaYeu_Cutted.mp3';
+        music.load();
+        music.play();
     })
 }
 
