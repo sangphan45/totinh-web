@@ -75,10 +75,6 @@ $('#no').click(() => {
 
 // generate text in input
 function textGenerate() {
-    var music = document.getElementById('music');
-    music.src = './sound/LoveBoy88.mp3';
-    music.load();
-    music.play();
     var n = "";
     var text = " " + CONFIG.reply;
     var a = Array.from(text);
@@ -102,6 +98,10 @@ function textGenerate() {
 $('#yes').click(function() {
     var audio = new Audio('sound/tick.mp3');
     audio.play();
+    var music = document.getElementById('music');
+    music.src = './sound/LoveBoy88.mp3';
+    music.load();
+    music.play();
     Swal.fire({
         title: CONFIG.question,
         html: true,
